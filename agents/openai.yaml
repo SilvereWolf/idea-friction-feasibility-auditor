@@ -1,0 +1,6 @@
+interface:
+  display_name: "Idea Friction & Feasibility Auditor"
+  short_description: "Stress-test ideas before investing in them"
+  default_prompt: "Use $idea-friction-feasibility-auditor to stress-test this idea and improve its weakest assumptions."
+policy:
+  allow_implicit_invocation: false
