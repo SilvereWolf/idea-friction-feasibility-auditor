@@ -1,6 +1,8 @@
 # Idea Friction & Feasibility Auditor
 
-A portable `/consult` skill that stress-tests ideas before you spend serious time, money, or engineering effort on them.
+A universal `/consult` prompt and Agent Skill that stress-tests ideas before you spend serious time, money, or engineering effort on them.
+
+**Works with ChatGPT, Claude, Gemini, Codex, Claude Code, Gemini CLI, and local models.** Native Agent Skills support is optional: every model can use the full behavior through `PROMPT.md`.
 
 It is designed to resist two common model failures:
 
@@ -35,6 +37,7 @@ You can also use `@consult`, `use consult`, or `$idea-friction-feasibility-audit
 | `SKILL.md` | Installable Agent Skills-compatible instruction file |
 | `PROMPT.md` | Full model-agnostic meta-prompt |
 | `QUICK_PROMPT.md` | Compact prompt for small context windows |
+| `INSTALL.md` | Platform-specific installation guide |
 | `references/domain-modules.md` | Conditional domain-specific audit checks |
 | `references/examples.md` | Behavioral examples and edge cases |
 | `tests/behavioral-scenarios.md` | Portable manual evaluation suite |
@@ -42,37 +45,19 @@ You can also use `@consult`, `use consult`, or `$idea-friction-feasibility-audit
 
 ## Installation
 
-### Any chat model
+Choose your platform:
 
-Copy the prompt from [`PROMPT.md`](PROMPT.md) into the model's system, project, or custom instructions. Use [`QUICK_PROMPT.md`](QUICK_PROMPT.md) when instruction space is limited.
+| Platform | Fastest setup |
+| --- | --- |
+| ChatGPT / custom GPT | Paste [`PROMPT.md`](PROMPT.md) into Project or GPT instructions |
+| Claude.ai | Paste [`PROMPT.md`](PROMPT.md) into Claude Project instructions |
+| Gemini Apps | Create a Gem and paste [`PROMPT.md`](PROMPT.md) into its instructions |
+| Claude Code | Clone the repository to `~/.claude/skills/idea-friction-feasibility-auditor` |
+| Gemini CLI | Run `gemini skills install https://github.com/SilvereWolf/idea-friction-feasibility-auditor` |
+| Codex and compatible agents | Clone the repository to `~/.agents/skills/idea-friction-feasibility-auditor` |
+| Local or other models | Use [`PROMPT.md`](PROMPT.md) as the system prompt |
 
-### Agent Skills-compatible tools
-
-Clone the repository into a skills directory recognized by your agent:
-
-```bash
-git clone https://github.com/SilvereWolf/idea-friction-feasibility-auditor.git ~/.agents/skills/idea-friction-feasibility-auditor
-```
-
-`~/.agents/skills/` is the preferred cross-runtime location when supported. Some tools use their own directory, such as `~/.claude/skills/` or `~/.codex/skills/`.
-
-### ChatGPT or custom GPT
-
-Paste `PROMPT.md` into the GPT or Project instructions. If the interface supports uploaded knowledge files, upload the repository files as supporting context. Explicit invocation remains part of the prompt contract.
-
-### Claude
-
-- Claude chat or Projects: paste `PROMPT.md` into Project Instructions.
-- Claude Code: clone the repository under `~/.claude/skills/idea-friction-feasibility-auditor` or a supported project skill directory.
-
-### Gemini
-
-- Gemini chat/Gem: paste `PROMPT.md` into the Gem instructions.
-- Gemini CLI: use a supported skills directory if available, or place the contents of `PROMPT.md` in the project's persistent instruction file.
-
-### Local models
-
-Use `PROMPT.md` as the system prompt. For smaller context windows, use `QUICK_PROMPT.md`. Tool-dependent evidence checks degrade gracefully: the model must mark unverifiable claims as unknown rather than fabricate support.
+See [`INSTALL.md`](INSTALL.md) for complete instructions, alternatives, verification steps, and uninstall commands.
 
 ## Example
 
