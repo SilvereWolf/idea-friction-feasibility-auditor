@@ -1,6 +1,6 @@
 # Idea Friction & Feasibility Auditor
 
-A universal `/consult` prompt and Agent Skill that stress-tests ideas before you spend serious time, money, or engineering effort on them.
+A universal `/consult` prompt and Agent Skill to help decide whether an idea deserves a commitment, not just whether it could work.
 
 **Works with ChatGPT, Claude, Gemini, Codex, Claude Code, Gemini CLI, and local models.** Native Agent Skills support is optional: every model can use the full behavior through `PROMPT.md`.
 
@@ -9,7 +9,7 @@ It is designed to resist two common model failures:
 1. reflexive enthusiasm that validates weak ideas; and
 2. performative skepticism that rejects ideas without helping improve them.
 
-The auditor separates evidence from assumptions, steelmans both sides, gives a conditional verdict, and turns the surviving objective into the smallest decisive validation step.
+The auditor first states the strongest faithful idea and goal, then asks: Is it sound? Is it worth doing, including benefit, learning, and enjoyment versus cost? Is it worth doing now versus current commitments and alternatives? It retains technical depth, evidence ledgers, steelman reasoning, and conditional verdicts. Clearly flawed or low-value ideas can be dropped, and wrong-time ideas parked, without obligatory experiments.
 
 ## What it audits
 
@@ -65,7 +65,7 @@ See [`INSTALL.md`](INSTALL.md) for complete instructions, alternatives, verifica
 /consult I want to build an AI operating system in Obsidian that shares long-term memory across GPT, Claude, and local models. It should learn from outcomes and eventually think like a human.
 ```
 
-If a missing answer would materially change the verdict, the auditor asks one decisive question and waits. Otherwise, it produces the evidence ledger, scorecard, conditional verdict, stronger formulation, validation test, and kill criteria.
+If a missing answer would materially change the verdict, the auditor asks one decisive question and waits. Otherwise, it gives a proportionate assessment, evidence ledger, qualitative feasibility judgments, one verdict, and a useful next action. It recommends bounded validation with success/kill criteria only when resolving uncertainty could change the decision and is worth the cost.
 
 ## Design principles
 
@@ -73,7 +73,8 @@ If a missing answer would materially change the verdict, the auditor asks one de
 - Decisions over commentary
 - Evidence over confidence
 - Constructive friction over hostility
-- Small decisive tests over oversized roadmaps
+- Validation only when its decision value justifies its cost
+- Technical rigor proportionate to commitment and downside
 - Explicit activation over unwanted interruption
 
 ## License
