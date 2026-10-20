@@ -1,10 +1,10 @@
 # Domain Modules
 
-Apply only modules relevant to the proposal. These extend rather than replace the universal audit.
+Apply only modules relevant to the proposal. These extend rather than replace the soundness, value, and timing decision. Apply depth proportionate to the proposed commitment; an early rejection need not exhaust every module.
 
 ## Software and AI
 
-- Architecture boundaries and state ownership
+- Architecture boundaries, state ownership, integration contracts, consistency, and dependency maturity
 - Data availability, quality, permissions, provenance, and retention
 - Model limits, nondeterminism, hallucination, evaluation, and human oversight
 - Security, privacy, secrets, prompt injection, and tool authorization
@@ -34,7 +34,7 @@ Apply only modules relevant to the proposal. These extend rather than replace th
 - Desired outcome versus emotionally attractive proxy
 - Values, constraints, affected people, and consent
 - Best case, base case, worst case, and cost of delay
-- Reversibility, safety, and smallest low-risk experiment
+- Reversibility, safety, and whether any low-risk check is worth its decision value
 - Separate observed behavior from interpretation; do not diagnose people
 
 ## Operations and Process
@@ -50,3 +50,12 @@ Apply only modules relevant to the proposal. These extend rather than replace th
 - Retrieval precision versus context overload
 - Versioning, schema evolution, and deletion or correction pathways
 - Evaluation that proves the system improves decisions rather than merely storing more information
+
+## Emerging Science and Technology
+
+- Claimed mechanism, governing physical constraints, measurement quality, controls, and independent replication
+- Separate scientific plausibility, demonstrated performance, engineering readiness, and present economics
+- Lab-to-system gaps: realistic environment, reliability, safety, fabrication yield, supply chain, and scale
+- Pressure-test improvement rates and timelines against bottlenecks; identify what must change for the forecast to hold
+- Compare alternative explanations and competing approaches; avoid both hype and dismissing an unproven mechanism as impossible
+- Match any validation to the commitment: existing evidence review may justify a decision before expensive prototyping
